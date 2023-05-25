@@ -1,0 +1,166 @@
+body {/*setting background for the whole page*/
+    background-color: black;
+    display: block;
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 460;
+    letter-spacing: -.022em;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1 {/*setting the font size and color for the heading*/
+    color: brown;
+    text-align: center;
+}
+
+h2{/*setting the font size and color for the heading*/
+    color : blanchedalmond;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.video{/*for the class video*/
+    display: flex;
+    justify-content: center;
+    border: white 2px solid;
+}
+.about{/*for the class about*/
+    color: white;
+    margin-bottom: 50px;
+
+}
+.socials{/*for the class socials*/
+    text-align: center;
+}
+.socials a{/*for each element of class socials so the icons are spread out*/
+    margin-right: 20px;
+}
+.container {/*for the container that includes the image and navigation bar*/
+    position: relative;
+}
+
+.container img {/*for the image in the container*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0px;
+}
+
+.container_2 {/*for the container that is hosting the poem*/
+    position: relative;
+}
+
+.container_2 img {/*for the image of the poem template*/
+    width: 100%;
+    height: auto;
+}
+
+.poem {/*for the poem container*/
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+}
+
+.poem pre {/*alignment for the poem's each element*/
+    background-color: rgba(255, 255, 255, 0);
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+
+.nav-overlay {/*for the navigation bar*/
+    position: absolute;/*to make sure the navigation bar is on top of the image in the container*/
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;/*to make sure the navigation bar is in a row*/
+    justify-content: center;/*to make sure the navigation bar is in the center*/
+    align-items: center;
+    z-index: 1;/*to make sure the navigation bar is on top of the image, the object with larger z-index is shown forward*/
+}
+
+.nav-overlay ul {/*for the unordered list in the navigation bar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    font-size: 25px;
+
+}
+
+
+.nav-overlay a {/*for each element of the unordered list*/
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #FF6B6B;/*giving underline to each element*/
+    margin: 0 25px;
+
+}
+
+.text-overlay {/*for the container of the text on the image that says "The labyrinth*/
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.text-overlay h1 {
+    color: #FF6B6B;/*setting the color of the text*/
+    font-size: 60px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.screening {/* the container of the text on the image that says "Screening now:"*/
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.screening h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/*to hover over the navigation bar*/
+.nav-overlay a:hover {
+    color: #FF6B6B;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 800px) {/*for smaller screens i.e. screen less than 800px*/
+    .nav-overlay ul {
+        font-size: 10px;
+    }
+
+    .text-overlay h1 {
+        font-size: 100%;
+    }
+
+    .screening h1 {
+        font-size: 100%;
+    }
+
+
+}
+@media only screen and (max-width: 1000px){
+    .poem{
+        font-size: 5px;
+    }
+}
